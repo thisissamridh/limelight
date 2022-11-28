@@ -1,0 +1,47 @@
+[35msmart-contracts:build: [0mcache hit, replaying output [2m1ea2f8d4ec3b3684[0m
+[35msmart-contracts:build: [0m$ anchor build  
+[35msmart-contracts:build: [0mBPF SDK: /home/aabid/.local/bin/sdk/bpf
+[35msmart-contracts:build: [0mcargo-build-bpf child: rustup toolchain list -v
+[35msmart-contracts:build: [0mcargo-build-bpf child: rustup toolchain uninstall bpf
+[35msmart-contracts:build: [0minfo: uninstalling toolchain 'bpf'
+[35msmart-contracts:build: [0minfo: toolchain 'bpf' uninstalled
+[35msmart-contracts:build: [0mcargo-build-bpf child: rustup toolchain link bpf /home/aabid/.local/bin/sdk/bpf/dependencies/bpf-tools/rust
+[35msmart-contracts:build: [0mcargo-build-bpf child: cargo +bpf build --target bpfel-unknown-unknown --release
+[35msmart-contracts:build: [0mwarning: unused import: `anchor_lang::solana_program::system_program`
+[35msmart-contracts:build: [0m --> programs/blog/src/lib.rs:2:5
+[35msmart-contracts:build: [0m  |
+[35msmart-contracts:build: [0m2 | use anchor_lang::solana_program::system_program;
+[35msmart-contracts:build: [0m  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[35msmart-contracts:build: [0m  |
+[35msmart-contracts:build: [0m  = note: `#[warn(unused_imports)]` on by default
+[35msmart-contracts:build: [0m
+[35msmart-contracts:build: [0mwarning: unused variable: `ctx`
+[35msmart-contracts:build: [0m  --> programs/blog/src/lib.rs:59:24
+[35msmart-contracts:build: [0m   |
+[35msmart-contracts:build: [0m59 |     pub fn delete_post(ctx:Context<DeletePost>) -> Result<()> {
+[35msmart-contracts:build: [0m   |                        ^^^ help: if this is intentional, prefix it with an underscore: `_ctx`
+[35msmart-contracts:build: [0m   |
+[35msmart-contracts:build: [0m   = note: `#[warn(unused_variables)]` on by default
+[35msmart-contracts:build: [0m
+[35msmart-contracts:build: [0mwarning: constant is never used: `MAX_CONTENT_LENGTH`
+[35msmart-contracts:build: [0m  --> programs/blog/src/lib.rs:69:1
+[35msmart-contracts:build: [0m   |
+[35msmart-contracts:build: [0m69 | const MAX_CONTENT_LENGTH: usize = 2420 * 4; // 2800 chars max.
+[35msmart-contracts:build: [0m   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[35msmart-contracts:build: [0m   |
+[35msmart-contracts:build: [0m   = note: `#[warn(dead_code)]` on by default
+[35msmart-contracts:build: [0m
+[35msmart-contracts:build: [0mwarning: constant is never used: `MAX_URL_LENGTH`
+[35msmart-contracts:build: [0m  --> programs/blog/src/lib.rs:70:1
+[35msmart-contracts:build: [0m   |
+[35msmart-contracts:build: [0m70 | const MAX_URL_LENGTH: usize = 200 * 4;
+[35msmart-contracts:build: [0m   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[35msmart-contracts:build: [0m
+[35msmart-contracts:build: [0mwarning: `blog` (lib) generated 4 warnings
+[35msmart-contracts:build: [0m    Finished release [optimized] target(s) in 0.74s
+[35msmart-contracts:build: [0mcargo-build-bpf child: /home/aabid/.local/bin/sdk/bpf/dependencies/bpf-tools/llvm/bin/llvm-readelf --dyn-symbols /home/aabid/projects/sol-blog/contracts/target/deploy/blog.so
+[35msmart-contracts:build: [0m
+[35msmart-contracts:build: [0mTo deploy this program:
+[35msmart-contracts:build: [0m  $ solana program deploy /home/aabid/projects/sol-blog/contracts/target/deploy/blog.so
+[35msmart-contracts:build: [0mThe program address will default to this keypair (override with --program-id):
+[35msmart-contracts:build: [0m  /home/aabid/projects/sol-blog/contracts/target/deploy/blog-keypair.json
